@@ -21,6 +21,9 @@ class Manufacturer(models.Model):
         verbose_name = "manufacturer"
         verbose_name_plural = "manufacturers"
 
+    def __str__(self):
+        return f"{self.name} ({self.country})"
+
 
 class Car(models.Model):
     model = models.CharField(max_length=255)
